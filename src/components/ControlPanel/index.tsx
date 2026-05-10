@@ -8,6 +8,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
   targetLanguage,
   onSourceChange,
   onTargetChange,
+  onSwapLanguages,
   isMicOn,
   onMicToggle,
   audioSettings,
@@ -15,13 +16,6 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
   recognizingText,
 }) => {
   const [isSettingsExpanded, setIsSettingsExpanded] = useState(true);
-
-  // 交换语言
-  const handleSwapLanguages = () => {
-    const temp = sourceLanguage;
-    onSourceChange(targetLanguage);
-    onTargetChange(temp);
-  };
 
   return (
     <div className="sidebar-left w-72 h-auto bg-gray-900/80 backdrop-blur-xl border-r border-gray-700/50 flex flex-col md:h-full">
@@ -79,7 +73,7 @@ const ControlPanel: React.FC<ControlPanelProps> = ({
 
         {/* 交换按钮 */}
         <button
-          onClick={handleSwapLanguages}
+          onClick={onSwapLanguages}
           className="w-full py-2 flex items-center justify-center gap-2 text-gray-400
                      hover:text-white transition-colors duration-200 group"
         >
