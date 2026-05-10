@@ -37,6 +37,7 @@ export interface ControlPanelProps {
   targetLanguage: string;
   onSourceChange: (lang: string) => void;
   onTargetChange: (lang: string) => void;
+  onSwapLanguages: () => void;
   isMicOn: boolean;
   onMicToggle: () => void;
   audioSettings: AudioSettings;
