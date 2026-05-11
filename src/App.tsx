@@ -9,6 +9,7 @@ const App: React.FC = () => {
     targetLanguage,
     setSourceLanguage,
     setTargetLanguage,
+    swapLanguages,
     isMicOn,
     toggleMic,
     audioSettings,
@@ -35,6 +36,7 @@ const App: React.FC = () => {
           targetLanguage={targetLanguage}
           onSourceChange={setSourceLanguage}
           onTargetChange={setTargetLanguage}
+          onSwapLanguages={swapLanguages}
           isMicOn={isMicOn}
           onMicToggle={toggleMic}
           audioSettings={audioSettings}
